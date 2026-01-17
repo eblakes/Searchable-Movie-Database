@@ -25,6 +25,8 @@ async function renderMovies(searchTerm) {
 function callMovies(movieList) {
   moviesWrapper.innerHTML = movieList
     .map((movie) => {
+        const securePoster = movie.Poster.replace("http://", "https://");
+        movie.Poster = securePoster;
       return ` <div class="movie">
         <img src="${movie.Poster}" alt="${movie.Title}">
         <h2>${movie.Title}</h2>

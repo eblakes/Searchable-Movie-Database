@@ -14,7 +14,7 @@ async function renderMovies(searchTerm) {
   const spinner = document.querySelector(".movies__loading--spinner");
   spinner.classList.add("show");
   const response = await fetch(
-    `http://www.omdbapi.com/?s=${searchTerm}&apikey=f1cf6984`
+    `https://www.omdbapi.com/?s=${searchTerm}&apikey=f1cf6984`
   );
   const data = await response.json();
   currentMovies = data.Search;
